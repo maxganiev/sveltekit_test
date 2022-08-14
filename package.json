@@ -1,0 +1,20 @@
+{
+	"name": "playground",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit package",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"mysql2": "^2.3.3",
+		"sass": "^1.54.0",
+		"svelte": "^3.44.0",
+		"svelte-preprocess": "^4.10.7",
+		"vite": "^3.0.0"
+	},
+	"type": "module"
+}
