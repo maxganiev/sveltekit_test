@@ -1,10 +1,13 @@
-import mysql from 'mysql2/promise';
+import mysql from 'mysql2';
 
-export const mysqlconn = await mysql.createConnection({
+const pool = mysql.createPool({
 	host: 'localhost',
 	user: 'root',
 	password: '',
 	database: 'elcomspb',
-	keepAliveInitialDelay: 1000000,
-	enableKeepAlive: true,
+	waitForConnections: true,
+	connectionLimit: 10,
+	queueLimit: 0,
 });
+
+export const promisedPool = pool.promise();
